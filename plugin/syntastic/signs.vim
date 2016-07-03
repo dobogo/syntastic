@@ -72,13 +72,17 @@ function! g:SyntasticSignsNotifier._setup() abort " {{{2
 
         " define the signs used to display syntax and style errors/warns
         execute 'sign define SyntasticError text=' . g:syntastic_error_symbol .
-            \ ' texthl=SyntasticErrorSign linehl=SyntasticErrorLine'
+            \ ' texthl=SyntasticErrorSign linehl=SyntasticErrorLine' .
+            \ ' icon=' . escape(g:syntastic_error_icon, '| \')
         execute 'sign define SyntasticWarning text=' . g:syntastic_warning_symbol .
-            \ ' texthl=SyntasticWarningSign linehl=SyntasticWarningLine'
+            \ ' texthl=SyntasticWarningSign linehl=SyntasticWarningLine' .
+            \ ' icon=' . escape(g:syntastic_warning_icon, '| \')
         execute 'sign define SyntasticStyleError text=' . g:syntastic_style_error_symbol .
-            \ ' texthl=SyntasticStyleErrorSign linehl=SyntasticStyleErrorLine'
+            \ ' texthl=SyntasticStyleErrorSign linehl=SyntasticStyleErrorLine' .
+            \ ' icon=' . escape(g:syntastic_style_error_icon, '| \')
         execute 'sign define SyntasticStyleWarning text=' . g:syntastic_style_warning_symbol .
-            \ ' texthl=SyntasticStyleWarningSign linehl=SyntasticStyleWarningLine'
+            \ ' texthl=SyntasticStyleWarningSign linehl=SyntasticStyleWarningLine' .
+            \ ' icon=' . escape(g:syntastic_style_warning_icon, '| \')
     endif
 endfunction " }}}2
 

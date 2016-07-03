@@ -84,6 +84,7 @@ let g:_SYNTASTIC_DEFAULTS = {
         \ 'enable_balloons':          1,
         \ 'enable_highlighting':      1,
         \ 'enable_signs':             1,
+        \ 'error_icon':               '',
         \ 'error_symbol':             '>>',
         \ 'exit_checks':              !(s:_running_windows && syntastic#util#var('shell', &shell) =~? '\m\<cmd\.exe$'),
         \ 'filetype_map':             {},
@@ -98,8 +99,11 @@ let g:_SYNTASTIC_DEFAULTS = {
         \ 'shell':                    &shell,
         \ 'sort_aggregated_errors':   1,
         \ 'stl_format':               '[Syntax: line:%F (%t)]',
+        \ 'style_error_icon':         '',
         \ 'style_error_symbol':       'S>',
+        \ 'style_warning_icon':       '',
         \ 'style_warning_symbol':     'S>',
+        \ 'warning_icon':             '',
         \ 'warning_symbol':           '>>'
     \ }
 lockvar! g:_SYNTASTIC_DEFAULTS
